@@ -24,6 +24,9 @@
                 <div class="form-outline mb-3">
                   <input type="password" id="form3Example4cg" class="form-control form-control-lg" formControlName="Password" required />
                   <label class="form-label" for="form3Example4cg">Password</label>
+                  <div class="text-danger" *ngIf="userform.get('Password')?.hasError('minlength') && userform.get('Password')?.touched">
+                  <small>Password must be at least 8 characters long.</small>
+                  </div>
                 </div>
 
                 <div class="form-outline mb-3">
